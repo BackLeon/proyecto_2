@@ -1,0 +1,38 @@
+{% extends 'products/layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contenido">
+  <h2>Lista de Contactos </h2>
+    <hr class="hr">
+    <form id="eldiv">
+      <input id="busque1" type="text" name="first_name" placeholder="busqueda por nombre">
+      <input type="submit" value="buscar" id="busque2">
+    </form>
+    <hr>
+      <ul class="lista">
+        {% for contact in contacts %}
+
+
+          <li class="ss">
+              <h3 class="p1">{{contact}}</h3>
+
+                <span>
+                  <a href="{% url 'viewcon' pk=contact.id %}" class="btn btn-detail" >Ver</a>
+                  <a href="{% url 'updatecontact' pk=contact.id %}" class="btn btn-detail" >Actualizar</a>
+                  <a href="{% url 'deletecontact' pk=contact.id %}" class="btn btn-detail" >Eliminar</a>
+                </span>
+          </li>
+          <hr>
+
+        {% endfor %}
+
+      </ul>
+
+      <a href="#">Read More</a>
+</div>
+
+
+{% endblock %}
+
+

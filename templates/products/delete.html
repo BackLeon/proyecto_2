@@ -1,0 +1,21 @@
+{% extends 'products/layouts/base.html'%}
+{% load static %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'css/new.css'%}">{% endblock %}
+
+{% block content %}
+
+    {% if request.user == product.user %}
+    <form class="lista" method="POST">
+        {% csrf_token %}
+
+            <label class="p3"  >Vas a eliminar este producto: {{product}}</label>
+            <input id="elpepe"  type="submit" value="Eliminar">
+
+    </form>
+    {% endif%}
+
+
+
+
+{% endblock%}

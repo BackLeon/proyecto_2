@@ -1,0 +1,95 @@
+.inpbox {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    border-radius: 35px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #2F4F4F;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 70%);
+    font-weight: 800;
+
+}
+
+.inpbox input[type="submit"] {
+    background: #fff;
+    color: #666;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+
+}
+
+#elpepe {
+
+    background: #008080;
+    border: none;
+    outline: none;
+    padding: 20px 30px;
+    border-radius: 35px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #2F4F4F;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 70%);
+    font-weight: 800;
+    cursor: pointer;
+
+
+
+
+
+
+}
+
+
+
+
+.wrap {
+	position: absolute;
+	top: 50%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%) scale(2,2);
+}
+
+.lol {
+	display: none;
+}
+
+.nigga {
+	font-size: 24px;
+	color: #141e30;
+	display: inline-block;
+	padding: 0 0 0 1em;
+	cursor: pointer;
+}
+.nigga:before {
+	content: '';
+	display: inline-block;
+	background: #2F4F4F;
+	position: absolute;
+	left: 0;
+	top: 5px;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+	border-radius: 80%;
+	box-shadow: 0px 1px 0 0 rgba(0, 0, 0, .2);
+	box-sizing: border-box;
+	border: 10px solid #fff;
+	transition: border .3s ease;
+}
+
+.lol:checked + .nigga:before {
+	border-color: #fff;
+	border-width: 3px;
+}
+.lol + .nigga {
+	transition: color .7s ease;
+}
+.lol:checked + .nigga {
+	color: #2F4F4F;
+}

@@ -1,0 +1,43 @@
+{% extends 'products/layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contenido">
+  <h2>Lista de productos </h2>
+    <hr class="hr">
+    <form id="eldiv">
+      <input id="busque1" type="text" name="categoria" placeholder="busqueda por categoria">
+      <input type="submit" value="buscar" id="busque2">
+    </form>
+    <hr>
+      <ul class="lista">
+        {% for product in products %}
+
+
+          <li class="ss">
+            {% if product.available %}
+              <h3 class="p2">Disponible</h3>
+
+            {% else %}
+              <h3 class="p2">No disponible</h3>
+            {% endif%}
+              <h3 class="p1">{{product.name_product}}</h3>
+
+                <span>
+                  <a href="{% url 'view' pk=product.id %}  " class="btn btn-detail" >Ver</a>
+                  <a href="{% url 'update' pk=product.id %}" class="btn btn-detail" >Actualizar</a>
+                  <a href="{% url 'delete' pk=product.id %}" class="btn btn-detail" >Eliminar</a>
+                </span>
+          </li>
+          <hr>
+
+        {% endfor %}
+
+      </ul>
+
+      <a href="#">Read More</a>
+</div>
+
+
+{% endblock %}
+

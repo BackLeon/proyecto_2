@@ -1,0 +1,25 @@
+{% extends 'products/layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+{% if request.user == contact.user %}
+ <div>
+
+  <h2 id="col1">Nombre:</h2><h2>{{contact.first_name_contact}}</h2>
+  <hr>
+  <h2 id="col2" >Apellidos:</h2>
+  <h2 id="l1" >{{contact.last_name_contact}}</h2>
+    <hr>
+  <h2 id="col3" >Email:</h2>
+  <h2>{{contact.contact_email}}</h2>
+    <hr>
+  <h2 id="col4" >Celular:</h2>
+  <h2>{{contact.phone}}</h2>
+
+{% else %}
+
+    <h1>No eres el dueño de este producto</h1>
+{% endif %}
+
+ </div>
+{% endblock %}

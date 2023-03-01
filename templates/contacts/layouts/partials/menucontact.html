@@ -1,0 +1,18 @@
+      <div class="pepe">
+        <h2 >Tus contactos | {{request.user}}</h2>
+        <hr>
+
+          {% for contact in contacts %}
+            {% if request.user == contact.user %}
+                <h3 class="p22">{{contact}}</h3>
+                <span>
+                  <a href="{% url 'viewcon' pk=contact.id %}" class="pepe2" >Ver</a>
+                  <a href="#" class="pepe2" >Actualizar</a>
+                  <a href="#" class="pepe2" >Eliminar</a>
+                </span>
+                <hr>
+            {% endif%}
+          {% endfor %}
+
+
+      </div>

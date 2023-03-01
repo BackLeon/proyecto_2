@@ -1,0 +1,32 @@
+{% extends 'products/layouts/base.html'%}
+{% load static %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'css/new.css'%}">{% endblock %}
+
+{% block content %}
+
+
+    <form class="lista" method="POST">
+        {% csrf_token %}
+
+
+            <label class="p1" for="nombre">Nombre:</label>
+            <input class="inpbox" name="first_name_contact" id="nombre" required type="text" >
+
+            <label class="p1" for="apellidos">Apellidos:</label>
+            <input class="inpbox" name="last_name_contact" id="apellidos" required type="text" >
+
+            <label class="p1" for="correo">Email:</label>
+            <input class="inpbox" name="contact_email" id="correo" required type="email" >
+
+            <label class="p1" for="celular">Celular:</label>
+            <input class="inpbox" name="phone" id="celular" required type="text" placeholder="Ejemplo:  573226956868 " >
+
+            <label class="p3"  >Todos los campos son requeridos...</label>
+            <input id="elpepe"  type="submit" value="Añadir">
+    </form>
+
+
+
+
+{% endblock%}

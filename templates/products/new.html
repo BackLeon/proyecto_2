@@ -1,0 +1,43 @@
+{% extends 'products/layouts/base.html'%}
+{% load static %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'css/new.css'%}">{% endblock %}
+
+{% block content %}
+
+
+    <form class="lista" method="POST">
+        {% csrf_token %}
+
+
+            <label class="p1" for="categoria">Categoria:</label>
+            <input class="inpbox" name="category" id="categoria" required type="text" placeholder="Categoria de tu producto...">
+
+            <label class="p1" for="nombreproducto">Nombre del producto:</label>
+            <input class="inpbox" name="name_product" id="nombreproducto" required type="text" placeholder="Nombre del producto...">
+
+            <label class="p1" for="description">Descripcion del producto:</label>
+            <textarea class="inpbox" name="product_description" id="description" required cols="40" rows="10" placeholder="Descripción del producto..."></textarea>
+
+            <label class="p1" for="cant">Cantidad:</label>
+            <input class="inpbox" name="stock" id="cant" required type="number">
+
+
+            <div class="wrap centre">
+	            <div class="checkbox">
+		            <input class="lol" id="check" type="checkbox" name="available" value="check">
+		            <label class="nigga" for="check">¿Disponible?</label>
+	            </div>
+            </div>
+            <label class="p3"  >Todos los campos son requeridos...</label>
+            <input id="elpepe"  type="submit" value="Añadir">
+
+    </form>
+
+
+
+
+{% endblock%}
+
+
+

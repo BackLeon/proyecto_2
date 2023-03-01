@@ -1,0 +1,28 @@
+{% extends 'login/layouts/base.html'%}
+{% load static %}
+
+
+{% block title %}<title>Iniciar sesión</title>{% endblock%}
+
+{% block form %}
+<h2>Inicios de sesión</h2>
+<form method="POST">
+  {% csrf_token %}
+  <div class="user-box">
+    <input type="text" name="username" required>
+    <label>Username</label>
+  </div>
+  <div class="user-box">
+    <input type="password" name="password" required>
+    <label>Contraseña</label>
+  </div>
+  <a href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <input type="submit" value="Iniciar" class="inp">
+  </a>
+</form>
+
+{% endblock%}
