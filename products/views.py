@@ -62,3 +62,7 @@ class DeleteProduct(LoginRequiredMixin, DeleteView):
 
 
 
+
+def nada():
+    solo_es_una_prueba = "Hola mundo"
+    return solo_es_una_prueba
